@@ -10,6 +10,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,11 +18,7 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: Text('Epus On'),
       ),
-      body: Column(
-        children: <Widget>[
-          Buku(),
-        ],
-      ),
+      body: Buku()
     );
   }
 }

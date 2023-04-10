@@ -1,5 +1,8 @@
+import 'package:epus_on/tentang/tentang_kami.dart';
+import 'package:epus_on/ui/home.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
+
+import '../profil/profil.dart';
 
 class SideBar extends StatefulWidget {
   const SideBar({super.key});
@@ -16,31 +19,38 @@ class _SideBarState extends State<SideBar> {
         padding: EdgeInsets.zero,
         children: [
           UserAccountsDrawerHeader(
-            accountName: Text('HqMaru'), 
+            accountName: Text('HqMaru'),
             accountEmail: Text('rsutanna@gmail.com'),
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: NetworkImage(
-                  'https://maulidyasofyanadewi.files.wordpress.com/2018/10/1.jpg',
-                ),
+                image: AssetImage('assets/img/library.jpg'),
                 fit: BoxFit.cover,
               ),
             ),
           ),
           ListTile(
-            leading : Icon(Icons.library_books),
+            leading: Icon(Icons.library_books),
             title: Text('Perpustakaan'),
-            onTap: () => null,
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const Home()));
+            },
           ),
           ListTile(
-            leading : Icon(Icons.account_circle),
+            leading: Icon(Icons.account_circle),
             title: Text('Profil'),
-            onTap: () => null,
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const Profil()));
+            },
           ),
           ListTile(
-            leading : Icon(Icons.supervisor_account),
-            title: Text('Perpustakaan'),
-            onTap: () => null,
+            leading: Icon(Icons.supervisor_account),
+            title: Text('Tentang kami'),
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const TentangKami()));
+            },
           ),
         ],
       ),
