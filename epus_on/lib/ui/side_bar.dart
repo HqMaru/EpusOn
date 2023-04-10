@@ -1,7 +1,6 @@
 import 'package:epus_on/tentang/tentang_kami.dart';
 import 'package:epus_on/ui/home.dart';
 import 'package:flutter/material.dart';
-
 import '../profil/profil.dart';
 
 class SideBar extends StatefulWidget {
@@ -41,7 +40,7 @@ class _SideBarState extends State<SideBar> {
             title: Text('Profil'),
             onTap: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const Profil()));
+                  MaterialPageRoute(builder: (context) => Profil(nama: 'HqMaru', email: 'rsutanna@gmail.com',)));
             },
           ),
           ListTile(

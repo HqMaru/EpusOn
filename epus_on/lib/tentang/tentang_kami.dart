@@ -18,7 +18,12 @@ class TentangKami extends StatelessWidget {
           child: ListView(
             children: [
               Center(
-                child: Image.asset('assets/img/logo.jpg')
+                child: Image.asset('assets/img/logo1.png')
+              ),
+              Text('Epus ON', textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20.0),
               ),
             ],
           ),

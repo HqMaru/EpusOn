@@ -67,8 +67,9 @@ flutter:
     - assets/img/marvel.jpg
     - assets/img/dilan.jpg
     - assets/img/library.jpg
-    - assets/img/logo.jpg
     - assets/img/profil.jpg
+    - assets/img/logo1.png
+    - assets/img/lambang.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 class Profil extends StatelessWidget {
-  const Profil({super.key});
+  Profil({super.key, required this.nama, required this.email});
+
+  final String nama;
+  final String email;
 
   @override
   Widget build(BuildContext context) {
@@ -27,16 +30,14 @@ class Profil extends StatelessWidget {
                         border: Border.all(width: 4, color: Colors.white),
                         boxShadow: [
                           BoxShadow(
-                            spreadRadius: 2,
-                            blurRadius: 10,
-                            color: Colors.black.withOpacity(0.1)
-                          ),
+                              spreadRadius: 2,
+                              blurRadius: 10,
+                              color: Colors.black.withOpacity(0.1)),
                         ],
                         shape: BoxShape.circle,
                         image: DecorationImage(
-                          image: AssetImage('img/profil.jpg'),
-                          fit: BoxFit.cover
-                        ),
+                            image: AssetImage('img/profil.jpg'),
+                            fit: BoxFit.cover),
                       ),
                     ),
                     Positioned(
@@ -47,18 +48,38 @@ class Profil extends StatelessWidget {
                         width: 40,
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
-                          border: Border.all(
-                            width: 4,
-                            color: Colors.white
-                          ),
+                          border: Border.all(width: 4, color: Colors.white),
                           color: Colors.blue,
                         ),
-                        child: Icon(Icons.edit, color: Colors.white,),
+                        child: Icon(
+                          Icons.edit,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                   ],
                 ),
               ),
+              Padding(padding: EdgeInsets.all(20.0)),
+              TextField(decoration: InputDecoration(
+                hintText: nama,
+                hintStyle: TextStyle(color: Colors.black),
+                suffixIcon: Icon(
+                  Icons.edit,
+                  color: Colors.teal,
+                  ),
+                ),
+              ), 
+              Padding(padding: EdgeInsets.all(15.0)),    
+              TextField(decoration: InputDecoration(
+                hintText: email,
+                hintStyle: TextStyle(color: Colors.black),
+                suffixIcon: Icon(
+                  Icons.edit,
+                  color: Colors.teal,
+                  ),
+                ),
+              ),     
             ],
           ),
         ),
