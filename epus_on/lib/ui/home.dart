@@ -1,4 +1,4 @@
-import 'package:epus_on/ui/daftar_buku.dart';
+import 'package:epus_on/ui/perpus.dart';
 import 'package:epus_on/ui/side_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +18,7 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: Text('Epus On'),
       ),
-      body: Buku()
+      body: Perpus()
     );
   }
 }
