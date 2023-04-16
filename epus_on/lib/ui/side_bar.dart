@@ -17,35 +17,42 @@ class _SideBarState extends State<SideBar> {
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
-          UserAccountsDrawerHeader(
-            accountName: Text('HqMaru'),
-            accountEmail: Text('rsutanna@gmail.com'),
+          const UserAccountsDrawerHeader(
+            accountName: Text('HqMaru', style: TextStyle(
+              color: Colors.black,
+              fontWeight: FontWeight.bold),
+            ),
+            accountEmail: Text('rsutanna@gmail.com',
+              style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.bold),
+            ),
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/img/library.jpg'),
+                image: AssetImage('assets/img/desain1.jpg'),
                 fit: BoxFit.cover,
               ),
             ),
           ),
           ListTile(
-            leading: Icon(Icons.library_books),
-            title: Text('Perpustakaan'),
+            leading: const Icon(Icons.library_books),
+            title: const Text('Perpustakaan'),
             onTap: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const Home()));
             },
           ),
           ListTile(
-            leading: Icon(Icons.account_circle),
-            title: Text('Profil'),
+            leading: const Icon(Icons.account_circle),
+            title: const Text('Profil'),
             onTap: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => Profil(nama: 'HqMaru', email: 'rsutanna@gmail.com',)));
+                  MaterialPageRoute(builder: (context) => const Profil(nama: 'HqMaru', email: 'rsutanna@gmail.com',)));
             },
           ),
           ListTile(
-            leading: Icon(Icons.supervisor_account),
-            title: Text('Tentang kami'),
+            leading: const Icon(Icons.supervisor_account),
+            title: const Text('Tentang kami'),
             onTap: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const TentangKami()));

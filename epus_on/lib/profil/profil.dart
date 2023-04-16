@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Profil extends StatelessWidget {
-  Profil({super.key, required this.nama, required this.email});
+  const Profil({super.key, required this.nama, required this.email});
 
   final String nama;
   final String email;
@@ -10,10 +10,10 @@ class Profil extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Profil'),
+        title: const Text('Profil'),
       ),
       body: Container(
-        padding: EdgeInsets.only(left: 15, top: 20, right: 15),
+        padding: const EdgeInsets.only(left: 15, top: 20, right: 15),
         child: GestureDetector(
           onTap: () {
             FocusScope.of(context).unfocus();
@@ -35,7 +35,7 @@ class Profil extends StatelessWidget {
                               color: Colors.black.withOpacity(0.1)),
                         ],
                         shape: BoxShape.circle,
-                        image: DecorationImage(
+                        image: const DecorationImage(
                             image: AssetImage('img/profil.jpg'),
                             fit: BoxFit.cover),
                       ),
@@ -51,7 +51,7 @@ class Profil extends StatelessWidget {
                           border: Border.all(width: 4, color: Colors.white),
                           color: Colors.blue,
                         ),
-                        child: Icon(
+                        child: const Icon(
                           Icons.edit,
                           color: Colors.white,
                         ),
@@ -60,21 +60,21 @@ class Profil extends StatelessWidget {
                   ],
                 ),
               ),
-              Padding(padding: EdgeInsets.all(20.0)),
+              const Padding(padding: EdgeInsets.all(20.0)),
               TextField(decoration: InputDecoration(
                 hintText: nama,
-                hintStyle: TextStyle(color: Colors.black),
-                suffixIcon: Icon(
+                hintStyle: const TextStyle(color: Colors.black),
+                suffixIcon: const Icon(
                   Icons.edit,
                   color: Colors.teal,
                   ),
                 ),
               ), 
-              Padding(padding: EdgeInsets.all(15.0)),    
+              const Padding(padding: EdgeInsets.all(15.0)),    
               TextField(decoration: InputDecoration(
                 hintText: email,
-                hintStyle: TextStyle(color: Colors.black),
-                suffixIcon: Icon(
+                hintStyle: const TextStyle(color: Colors.black),
+                suffixIcon: const Icon(
                   Icons.edit,
                   color: Colors.teal,
                   ),
