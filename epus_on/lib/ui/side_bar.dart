@@ -27,6 +27,9 @@ class _SideBarState extends State<SideBar> {
                 color: Colors.black,
                 fontWeight: FontWeight.bold),
             ),
+            currentAccountPicture: CircleAvatar(
+              backgroundImage: AssetImage('assets/img/profil.jpg'),
+            ),
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/img/desain1.jpg'),

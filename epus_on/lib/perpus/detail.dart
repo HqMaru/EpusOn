@@ -44,21 +44,23 @@ class _DetailState extends State<Detail> {
             ),
           ),
           const Padding(padding: EdgeInsets.all(5.0)),
-          ExpansionPanelList(
-            expansionCallback: (panelIndex, isExpanded) {},
-            children: [
-              ExpansionPanel(
-                headerBuilder: (context, isExpanded) {
-                  return const ListTile(
-                    title: Text('Ringkasan'),
-                  );
-                },
-                isExpanded: true,
-                body: ListTile(
-                  title: Text(widget.model.deskripsi),
+          SingleChildScrollView(
+            child: ExpansionPanelList(
+              expansionCallback: (panelIndex, isExpanded) {},
+              children: [
+                ExpansionPanel(
+                  headerBuilder: (context, isExpanded) {
+                    return const ListTile(
+                      title: Text('Ringkasan'),
+                    );
+                  },
+                  isExpanded: true,
+                  body: ListTile(
+                    title: Text(widget.model.deskripsi),
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ],
       ),
