@@ -1,6 +1,7 @@
 import 'package:epus_on/model/model.dart';
 import 'package:epus_on/model/repository.dart';
-import 'package:epus_on/perpus/detail.dart';
+import 'package:epus_on/Buku/detail.dart';
+import 'package:epus_on/ui/list_search.dart';
 import 'package:epus_on/ui/side_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -30,9 +31,13 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const SideBar(),
-      appBar: AppBar(
-        title: const Text('Epus On'),
-      ),
+      appBar: AppBar(title: const Text('Epus On'), 
+      actions: [
+        IconButton(
+          onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) =>ListSearch())),
+          icon: Icon(Icons.search),
+        ),
+      ]),
       body: Container(
         padding: const EdgeInsets.all(10.0),
         child: GridView.builder(
@@ -43,12 +48,13 @@ class _HomeState extends State<Home> {
               return InkWell(
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context)=> Detail(model: listBuku[index])));
+                      builder: (BuildContext context) =>
+                          Detail(model: listBuku[index])));
                 },
                 child: Card(
                   child: Column(
                     children: <Widget>[
-                      Expanded   (
+                      Expanded(
                         child: Hero(
                           tag: listBuku[index].id,
                           child: Image.network(

@@ -18,11 +18,11 @@ class _SideBarState extends State<SideBar> {
         padding: EdgeInsets.zero,
         children: [
           const UserAccountsDrawerHeader(
-            accountName: Text('HqMaru', style: TextStyle(
+            accountName: Text('', style: TextStyle(
               color: Colors.black,
               fontWeight: FontWeight.bold),
             ),
-            accountEmail: Text('rsutanna@gmail.com',
+            accountEmail: Text('',
               style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.bold),
