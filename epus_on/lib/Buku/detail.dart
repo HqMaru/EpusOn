@@ -1,5 +1,6 @@
 import 'package:epus_on/model/model.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Detail extends StatefulWidget {
   final Buku model;
@@ -27,7 +28,26 @@ class _DetailState extends State<Detail> {
               height: 270.0,
             ),
           ),
-          const Padding(padding: EdgeInsets.only(bottom:10.0)),
+          const Padding(padding: EdgeInsets.only(bottom: 10.0)),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              TextButton(
+                  onPressed: () async {
+                    final url = (widget.model.link);
+
+                    if (await canLaunch(url)) {
+                      await launch(url);
+                    }
+                  },
+                  style: TextButton.styleFrom(
+                      primary: Colors.white,
+                      backgroundColor: Colors.blue.shade600),
+                  child: const Text('Beli')),
+            ],
+          ),
+          const Padding(padding: EdgeInsets.only(bottom: 10.0)),
           Padding(
             padding: const EdgeInsets.all(15.0),
             child: Column(
@@ -45,6 +65,13 @@ class _DetailState extends State<Detail> {
                   widget.model.judul,
                   style: const TextStyle(
                     fontSize: 17.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Text(
+                  widget.model.tgl_terbit,
+                  style: const TextStyle(
+                    fontSize: 15.0,
                     fontWeight: FontWeight.bold,
                   ),
                 ),

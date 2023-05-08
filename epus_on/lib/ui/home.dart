@@ -34,8 +34,8 @@ class _HomeState extends State<Home> {
       appBar: AppBar(title: const Text('Epus On'), 
       actions: [
         IconButton(
-          onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) =>ListSearch())),
-          icon: Icon(Icons.search),
+          onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) =>const ListSearch())),
+          icon: const Icon(Icons.search),
         ),
       ]),
       body: Container(
