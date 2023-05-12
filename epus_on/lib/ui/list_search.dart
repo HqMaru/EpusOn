@@ -11,7 +11,7 @@ class ListSearch extends StatefulWidget {
 
 class _ListSearchState extends State<ListSearch> {
   List<Buku> listBuku = [];
-  List<Buku> search = [];
+  List<Buku> cari = [];
 
   Repository repository = Repository();
 
@@ -29,16 +29,14 @@ class _ListSearchState extends State<ListSearch> {
   TextEditingController controller = TextEditingController();
 
   onSearch(String text) async {
-    search.clear();
+    cari.clear();
     if (text.isEmpty) {
       setState(() {});
       return;
     }
-
-    listBuku.forEach((element) {
-      if (element.judul.contains(text)) search.add(element);
+    listBuku.forEach((Buku) {
+      if (Buku.judul.contains(text)) cari.add(Buku);
     });
-    setState(() {});
   }
 
   @override
@@ -64,7 +62,21 @@ class _ListSearchState extends State<ListSearch> {
         ),
       ),
       body: Center(
-        child: ListView.builder(
+        child: cari.length != 0 || controller.text.isNotEmpty
+            ? ListView.builder(
+                itemCount: cari.length,
+                itemBuilder: (context, index) {
+                  final b = listBuku[index];
+                  return Card(
+                    margin: const EdgeInsets.symmetric(vertical: 1),
+                    child: ListTile(
+                      leading: Image.network(b.cover),
+                      title: Text(b.judul),
+                    ),
+                  );
+                },
+              )
+            : ListView.builder(
                 itemCount: listBuku.length,
                 itemBuilder: (context, index) {
                   final a = listBuku[index];
@@ -75,7 +87,7 @@ class _ListSearchState extends State<ListSearch> {
                       title: Text(a.judul),
                     ),
                   );
-              }),
+                }),
       ),
     );
   }

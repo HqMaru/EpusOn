@@ -26,7 +26,7 @@ class TentangKami extends StatelessWidget {
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
               ),
               const Padding(padding: EdgeInsets.all(10.0)),
-              const Text('Eperpustakaan Online, Aplikasi perpustakaan digital untuk memudahkan anda membaca dan belajar dimanapun kapanpun .',
+              const Text('Aplikasi katalog buku, untuk memudahkan anda mencari buku yang anda inginkan secara cepat dan tepat',
               textAlign: TextAlign.center,
               ),
               const Padding(padding: EdgeInsets.all(30.0)),
