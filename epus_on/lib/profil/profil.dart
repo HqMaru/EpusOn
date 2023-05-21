@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
 class Profil extends StatelessWidget {
-  const Profil({super.key, required this.nama, required this.email});
+  const Profil({super.key});
 
-  final String nama;
-  final String email;
+  
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +61,7 @@ class Profil extends StatelessWidget {
               ),
               const Padding(padding: EdgeInsets.all(20.0)),
               TextField(decoration: InputDecoration(
-                hintText: nama,
+                hintText: 'nama',
                 hintStyle: const TextStyle(color: Colors.black),
                 suffixIcon: const Icon(
                   Icons.edit,
@@ -72,7 +71,7 @@ class Profil extends StatelessWidget {
               ), 
               const Padding(padding: EdgeInsets.all(15.0)),    
               TextField(decoration: InputDecoration(
-                hintText: email,
+                hintText: 'email',
                 hintStyle: const TextStyle(color: Colors.black),
                 suffixIcon: const Icon(
                   Icons.edit,

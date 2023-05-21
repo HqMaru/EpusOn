@@ -1,16 +1,16 @@
-import 'package:epus_on/model/model.dart';
+import 'package:epus_on/kategori/clases/model/model.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class Detail extends StatefulWidget {
-  final Buku model;
-  const Detail({super.key, required this.model});
+class ClasesDetail extends StatefulWidget {
+  final Clases model;
+  const ClasesDetail({super.key, required this.model});
 
   @override
-  State<Detail> createState() => _DetailState();
+  State<ClasesDetail> createState() => _ClasesDetailState();
 }
 
-class _DetailState extends State<Detail> {
+class _ClasesDetailState extends State<ClasesDetail> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

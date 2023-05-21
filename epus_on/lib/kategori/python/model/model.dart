@@ -1,4 +1,4 @@
-class Buku {
+class Piton{
   final String id;
   final String judul;
   final String pengarang;
@@ -7,7 +7,7 @@ class Buku {
   final String cover;
   final String link;
 
-  const Buku({
+  const Piton({
     required this.id,
     required this.judul,
     required this.pengarang,
@@ -17,8 +17,8 @@ class Buku {
     required this.link,
   });
 
-  factory Buku.fromJson(Map<String, dynamic> json) {
-    return Buku(
+  factory Piton.fromJson(Map<String, dynamic> json) {
+    return Piton(
       id: json['id'],
       judul: json['judul'],
       pengarang: json['pengarang'],

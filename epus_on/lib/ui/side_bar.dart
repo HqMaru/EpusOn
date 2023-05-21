@@ -1,3 +1,4 @@
+import 'package:epus_on/tentang/contact_us.dart';
 import 'package:epus_on/tentang/tentang_kami.dart';
 import 'package:epus_on/ui/home.dart';
 import 'package:flutter/material.dart';
@@ -50,7 +51,15 @@ class _SideBarState extends State<SideBar> {
             title: const Text('Profil'),
             onTap: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const Profil(nama: 'HqMaru', email: 'rsutanna@gmail.com',)));
+                  MaterialPageRoute(builder: (context) => const Profil()));
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.contact_mail),
+            title: const Text('Kontak Kami'),
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const ContactUsPage()));
             },
           ),
           ListTile(

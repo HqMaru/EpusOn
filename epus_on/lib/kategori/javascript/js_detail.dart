@@ -1,16 +1,16 @@
-import 'package:epus_on/model/model.dart';
+import 'package:epus_on/kategori/javascript/model/model.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class Detail extends StatefulWidget {
-  final Buku model;
-  const Detail({super.key, required this.model});
+class JsDetail extends StatefulWidget {
+  final Js model;
+  const JsDetail({super.key, required this.model});
 
   @override
-  State<Detail> createState() => _DetailState();
+  State<JsDetail> createState() => _JsDetailState();
 }
 
-class _DetailState extends State<Detail> {
+class _JsDetailState extends State<JsDetail> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
