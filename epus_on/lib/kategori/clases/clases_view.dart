@@ -30,7 +30,7 @@ class _ClasesViewState extends State<ClasesView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('C++'),
+        title: const Text('C++'),
       ),
       body: Column(
         children: [

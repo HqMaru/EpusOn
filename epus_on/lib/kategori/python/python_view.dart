@@ -31,7 +31,7 @@ class _PythonViewState extends State<PythonView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Python'),
+        title: const Text('Python'),
       ),
       body: Column(
         children: [

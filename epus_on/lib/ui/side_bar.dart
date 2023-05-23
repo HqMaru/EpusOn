@@ -1,4 +1,3 @@
-import 'package:epus_on/tentang/contact_us.dart';
 import 'package:epus_on/tentang/tentang_kami.dart';
 import 'package:epus_on/ui/home.dart';
 import 'package:flutter/material.dart';
@@ -40,7 +39,7 @@ class _SideBarState extends State<SideBar> {
           ),
           ListTile(
             leading: const Icon(Icons.library_books),
-            title: const Text('Perpustakaan'),
+            title: const Text('Daftar Buku'),
             onTap: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const Home()));
@@ -52,14 +51,6 @@ class _SideBarState extends State<SideBar> {
             onTap: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const Profil()));
-            },
-          ),
-          ListTile(
-            leading: const Icon(Icons.contact_mail),
-            title: const Text('Kontak Kami'),
-            onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const ContactUsPage()));
             },
           ),
           ListTile(

@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 class Profil extends StatelessWidget {
   const Profil({super.key});
 
-  
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,25 +58,27 @@ class Profil extends StatelessWidget {
                 ),
               ),
               const Padding(padding: EdgeInsets.all(20.0)),
-              TextField(decoration: InputDecoration(
-                hintText: 'nama',
-                hintStyle: const TextStyle(color: Colors.black),
-                suffixIcon: const Icon(
-                  Icons.edit,
-                  color: Colors.teal,
+              const TextField(
+                decoration: InputDecoration(
+                  hintText: 'nama',
+                  hintStyle: TextStyle(color: Colors.black),
+                  suffixIcon: Icon(
+                    Icons.edit,
+                    color: Colors.teal,
                   ),
                 ),
-              ), 
-              const Padding(padding: EdgeInsets.all(15.0)),    
-              TextField(decoration: InputDecoration(
-                hintText: 'email',
-                hintStyle: const TextStyle(color: Colors.black),
-                suffixIcon: const Icon(
-                  Icons.edit,
-                  color: Colors.teal,
+              ),
+              const Padding(padding: EdgeInsets.all(15.0)),
+              const TextField(
+                decoration: InputDecoration(
+                  hintText: 'email',
+                  hintStyle: TextStyle(color: Colors.black),
+                  suffixIcon: Icon(
+                    Icons.edit,
+                    color: Colors.teal,
                   ),
                 ),
-              ),     
+              ),
             ],
           ),
         ),

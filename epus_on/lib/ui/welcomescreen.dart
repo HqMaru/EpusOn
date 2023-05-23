@@ -17,12 +17,12 @@ class WelcomeScreen extends StatelessWidget {
                 Container(
                   width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.height / 1.6,
-                  decoration: BoxDecoration(color: Colors.white),
+                  decoration: const BoxDecoration(color: Colors.white),
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.height / 1.6,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.blue,
                     borderRadius:
                         BorderRadius.only(bottomRight: Radius.circular(70)),
@@ -41,7 +41,7 @@ class WelcomeScreen extends StatelessWidget {
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height / 2.66,
-                decoration: BoxDecoration(color: Colors.blue),
+                decoration: const BoxDecoration(color: Colors.blue),
               ),
             ),
             Align(
@@ -49,14 +49,14 @@ class WelcomeScreen extends StatelessWidget {
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height / 2.66,
-                padding: EdgeInsets.only(top: 40, bottom: 30),
-                decoration: BoxDecoration(
+                padding: const EdgeInsets.only(top: 40, bottom: 30),
+                decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(topLeft: Radius.circular(70)),
                 ),
                 child: Column(
                   children: [
-                    Text(
+                    const Text(
                       'Belajar Adalah Segalannya',
                       style: TextStyle(
                         fontSize: 19,
@@ -65,9 +65,9 @@ class WelcomeScreen extends StatelessWidget {
                         wordSpacing: 2,
                       ),
                     ),
-                    SizedBox(height: 15),
+                    const SizedBox(height: 15),
                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 40),
+                      padding: const EdgeInsets.symmetric(horizontal: 40),
                       child: Text(
                         'Belajar dengan Senang Hati, dimana pun Anda berada',
                         textAlign: TextAlign.center,
@@ -77,7 +77,7 @@ class WelcomeScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(height: 30),
+                    const SizedBox(height: 30),
                     Material(
                       color: Colors.blue,
                       borderRadius: BorderRadius.circular(10),
@@ -89,9 +89,9 @@ class WelcomeScreen extends StatelessWidget {
                               builder: (context) => const Home()));
                         },
                         child: Container(
-                          padding: EdgeInsets.symmetric(
+                          padding: const EdgeInsets.symmetric(
                               vertical: 15, horizontal: 50),
-                          child: Text(
+                          child: const Text(
                             'Mulai',
                             style: TextStyle(
                               color: Colors.white,

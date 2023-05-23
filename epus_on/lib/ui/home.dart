@@ -22,10 +22,10 @@ class _HomeState extends State<Home> {
   Repository repository = Repository();
 
   final List<String> imgList = [
-    'https://i.imgur.com/cBnj08x.jpg',
-    'https://i.imgur.com/77T6o5s.jpg',
-    'https://i.imgur.com/fdoqYQT.jpg',
-    'https://i.imgur.com/nb7FIPV.png'
+    'https://i.imgur.com/j9XPp2d.jpg',
+    'https://i.imgur.com/unh2mBH.jpg',
+    'https://i.imgur.com/030WIGA.jpg',
+    'https://i.imgur.com/HuHccYz.jpg'
   ];
 
   int _current = 0;
@@ -54,7 +54,7 @@ class _HomeState extends State<Home> {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const ListSearch()));
             },
-            child: SizedBox(
+            child: const SizedBox(
               width: 100.0,
               child: Icon(Icons.search),
             ),

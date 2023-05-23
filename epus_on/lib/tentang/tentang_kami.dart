@@ -1,3 +1,4 @@
+import 'package:epus_on/tentang/kontak.dart';
 import 'package:flutter/material.dart';
 
 class TentangKami extends StatelessWidget {
@@ -26,13 +27,28 @@ class TentangKami extends StatelessWidget {
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
               ),
               const Padding(padding: EdgeInsets.all(10.0)),
-              const Text('Aplikasi katalog buku, untuk memudahkan anda mencari buku yang anda inginkan secara cepat dan tepat',
-              textAlign: TextAlign.center,
+              const Text(
+                'Aplikasi katalog buku, untuk memudahkan anda mencari buku yang anda inginkan secara cepat dan tepat',
+                textAlign: TextAlign.center,
               ),
-              const Padding(padding: EdgeInsets.all(30.0)),
-              const Text('v1.0.', 
-              style: TextStyle(fontWeight: FontWeight.bold),
-              textAlign: TextAlign.center,
+              const Padding(padding: EdgeInsets.only(bottom: 20)),
+              TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Kontak()));
+                  },
+                  child: const Text(
+                    'HUBUNGI KAMI',
+                    style: TextStyle(fontWeight: FontWeight.bold)
+                    ),
+                  ),
+              const Padding(padding: EdgeInsets.only(bottom: 10)),
+              const Text(
+                'v1.0.',
+                style: TextStyle(fontWeight: FontWeight.bold),
+                textAlign: TextAlign.center,
               ),
             ],
           ),
@@ -41,4 +57,3 @@ class TentangKami extends StatelessWidget {
     );
   }
 }
-              
