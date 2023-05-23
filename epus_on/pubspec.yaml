@@ -72,9 +72,6 @@ flutter:
     - assets/img/html.png
     - assets/img/JavaScript.png
     - assets/img/Python.png
-    - assets/img/mail.png
-    - assets/img/whatsapp.png
-    - assets/img/instagram.png
     
 
   # An image asset can refer to one or more resolution-specific "variants", see
