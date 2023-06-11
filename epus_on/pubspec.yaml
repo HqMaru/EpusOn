@@ -33,6 +33,7 @@ dependencies:
   http: ^0.13.5
   url_launcher: ^6.1.10
   carousel_slider: ^4.2.1
+  image_picker: ^0.8.8
 
 
   # The following adds the Cupertino Icons font to your application.

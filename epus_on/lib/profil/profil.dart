@@ -1,7 +1,25 @@
-import 'package:flutter/material.dart';
+import 'dart:io';
 
-class Profil extends StatelessWidget {
+import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
+
+class Profil extends StatefulWidget {
   const Profil({super.key});
+
+  @override
+  State<Profil> createState() => _ProfilState();
+}
+
+class _ProfilState extends State<Profil> {
+  File? image;
+
+  Future getImage() async {
+    final ImagePicker picker = ImagePicker();
+    final XFile? imagePicked =
+        await picker.pickImage(source: ImageSource.gallery);
+    image = File(imagePicked!.path);
+    setState(() {});
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,23 +38,25 @@ class Profil extends StatelessWidget {
               Center(
                 child: Stack(
                   children: [
-                    Container(
-                      width: 130,
-                      height: 130,
-                      decoration: BoxDecoration(
-                        border: Border.all(width: 4, color: Colors.white),
-                        boxShadow: [
-                          BoxShadow(
-                              spreadRadius: 2,
-                              blurRadius: 10,
-                              color: Colors.black.withOpacity(0.1)),
-                        ],
-                        shape: BoxShape.circle,
-                        image: const DecorationImage(
-                            image: AssetImage('img/profil.jpg'),
-                            fit: BoxFit.cover),
-                      ),
-                    ),
+                    image != null
+                        ? Image.file(image!)
+                        : Container(
+                            width: 130,
+                            height: 130,
+                            decoration: BoxDecoration(
+                              border: Border.all(width: 4, color: Colors.white),
+                              boxShadow: [
+                                BoxShadow(
+                                    spreadRadius: 2,
+                                    blurRadius: 10,
+                                    color: Colors.black.withOpacity(0.1)),
+                              ],
+                              shape: BoxShape.circle,
+                              image: const DecorationImage(
+                                  image: AssetImage('img/profil.jpg'),
+                                  fit: BoxFit.cover),
+                            ),
+                          ),
                     Positioned(
                       bottom: 0,
                       right: 0,
@@ -48,9 +68,14 @@ class Profil extends StatelessWidget {
                           border: Border.all(width: 4, color: Colors.white),
                           color: Colors.blue,
                         ),
-                        child: const Icon(
-                          Icons.edit,
-                          color: Colors.white,
+                        child: InkWell(
+                          onTap: () async {
+                            await getImage();
+                          },
+                          child: const Icon(
+                            Icons.edit,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                     ),
