@@ -22,14 +22,14 @@ class _HomeState extends State<Home> {
   Repository repository = Repository();
 
   final List<String> imgList = [
-    'https://i.imgur.com/j9XPp2d.jpg',
-    'https://i.imgur.com/unh2mBH.jpg',
-    'https://i.imgur.com/030WIGA.jpg',
-    'https://i.imgur.com/HuHccYz.jpg'
+    'https://i.imgur.com/uxzZGIw.png',
+    'https://i.imgur.com/8xzIOnV.png',
+    'https://i.imgur.com/B9v2H8C.png',
+    'https://i.imgur.com/AJwlf6r.jpg'
   ];
 
-  int _current = 0;
-  final CarouselController _controller = CarouselController();
+  // int _current = 0;
+  // final CarouselController _controller = CarouselController();
 
   getData() async {
     listBuku = await repository.getData();
@@ -71,7 +71,7 @@ class _HomeState extends State<Home> {
                 enlargeCenterPage: true,
                 onPageChanged: ((index, reason) {
                   setState(() {
-                    _current = index;
+                    // _current = index;
                   });
                 })),
             items: imgList
@@ -106,26 +106,26 @@ class _HomeState extends State<Home> {
                     ))
                 .toList(),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: imgList.asMap().entries.map((entry) {
-              return GestureDetector(
-                onTap: () => _controller.animateToPage(entry.key),
-                child: Container(
-                  width: 12.0,
-                  height: 12.0,
-                  margin: const EdgeInsets.symmetric(
-                      vertical: 8.0, horizontal: 4.0),
-                  decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: (Theme.of(context).brightness == Brightness.dark
-                              ? Colors.white
-                              : Colors.black)
-                          .withOpacity(_current == entry.key ? 0.9 : 0.4)),
-                ),
-              );
-            }).toList(),
-          ),
+          // Row(
+          //   mainAxisAlignment: MainAxisAlignment.center,
+          //   children: imgList.asMap().entries.map((entry) {
+          //     return GestureDetector(
+          //       onTap: () => _controller.animateToPage(entry.key),
+          //       child: Container(
+          //         width: 12.0,
+          //         height: 12.0,
+          //         margin: const EdgeInsets.symmetric(
+          //             vertical: 8.0, horizontal: 4.0),
+          //         decoration: BoxDecoration(
+          //             shape: BoxShape.circle,
+          //             color: (Theme.of(context).brightness == Brightness.dark
+          //                     ? Colors.white
+          //                     : Colors.black)
+          //                 .withOpacity(_current == entry.key ? 0.9 : 0.4)),
+          //       ),
+          //     );
+          //   }).toList(),
+          // ),
           Padding(
             padding: const EdgeInsets.only(
                 right: 6.0, left: 6.0, top: 20.0, bottom: 16.0),

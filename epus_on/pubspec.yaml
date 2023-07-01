@@ -33,7 +33,6 @@ dependencies:
   http: ^0.13.5
   url_launcher: ^6.1.10
   carousel_slider: ^4.2.1
-  image_picker: ^0.8.8
   flutter_native_splash: ^1.2.3
 
 
@@ -47,7 +46,7 @@ dev_dependencies:
 
 flutter_native_splash:
   color: "#ffffff"
-  image: assets/img/logo1.png
+  image: assets/img/logo.png
   android: true
   ios: true
   web: true
@@ -74,8 +73,9 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/img/profil.jpg
+    - assets/img/profile.png
     - assets/img/logo1.png
+    - assets/img/logo.png
     - assets/img/desain1.jpg
     - assets/img/books.png
     - assets/img/c.png

@@ -1,7 +1,7 @@
 import 'package:epus_on/tentang/tentang_kami.dart';
 import 'package:epus_on/ui/home.dart';
 import 'package:flutter/material.dart';
-import '../profil/profil.dart';
+// import '../profil/profil.dart';
 
 class SideBar extends StatefulWidget {
   const SideBar({super.key});
@@ -17,25 +17,14 @@ class _SideBarState extends State<SideBar> {
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
-          const UserAccountsDrawerHeader(
-            accountName: Text('', style: TextStyle(
-              color: Colors.black,
-              fontWeight: FontWeight.bold),
-            ),
-            accountEmail: Text('',
-              style: TextStyle(
-                color: Colors.black,
-                fontWeight: FontWeight.bold),
-            ),
-            currentAccountPicture: CircleAvatar(
-              backgroundImage: AssetImage('assets/img/profil.jpg'),
-            ),
+          DrawerHeader(
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/img/desain1.jpg'),
                 fit: BoxFit.cover,
               ),
             ),
+            child: Text(''),
           ),
           ListTile(
             leading: const Icon(Icons.library_books),
@@ -45,14 +34,14 @@ class _SideBarState extends State<SideBar> {
                   MaterialPageRoute(builder: (context) => const Home()));
             },
           ),
-          ListTile(
-            leading: const Icon(Icons.account_circle),
-            title: const Text('Profil'),
-            onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const Profil()));
-            },
-          ),
+          // ListTile(
+          //   leading: const Icon(Icons.account_circle),
+          //   title: const Text('Profil'),
+          //   onTap: () {
+          //     Navigator.push(context,
+          //         MaterialPageRoute(builder: (context) => const Profil()));
+          //   },
+          // ),
           ListTile(
             leading: const Icon(Icons.supervisor_account),
             title: const Text('Tentang kami'),
