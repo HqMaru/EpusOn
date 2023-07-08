@@ -5,7 +5,7 @@ import 'package:epus_on/kategori/python/python_view.dart';
 import 'package:epus_on/model/model.dart';
 import 'package:epus_on/model/repository.dart';
 import 'package:epus_on/Buku/detail.dart';
-import 'package:epus_on/ui/list_search.dart';
+import 'package:epus_on/ui/search.dart';
 import 'package:epus_on/ui/side_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -48,16 +48,13 @@ class _HomeState extends State<Home> {
       drawer: const SideBar(),
       appBar: AppBar(
         title: const Text('Daftar Buku'),
-        actions: <Widget>[
-          InkWell(
-            onTap: () {
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.search),
+            onPressed: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const ListSearch()));
+                  MaterialPageRoute(builder: (context) => const Search()));
             },
-            child: const SizedBox(
-              width: 100.0,
-              child: Icon(Icons.search),
-            ),
           ),
         ],
       ),

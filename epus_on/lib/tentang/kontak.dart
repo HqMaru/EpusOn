@@ -54,7 +54,7 @@ class Kontak extends StatelessWidget {
             InkWell(
               onTap: _launchEmail,
               child: Container(
-                margin: EdgeInsets.all(16),
+                margin: const EdgeInsets.all(16),
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
                   color: Colors.blue,
@@ -84,7 +84,7 @@ class Kontak extends StatelessWidget {
             InkWell(
               onTap: _launchWhatsApp,
               child: Container(
-                margin: EdgeInsets.all(16),
+                margin: const EdgeInsets.all(16),
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
                   color: Colors.green,
@@ -114,7 +114,7 @@ class Kontak extends StatelessWidget {
             InkWell(
               onTap: _launchInstagram,
               child: Container(
-                margin: EdgeInsets.all(16),
+                margin: const EdgeInsets.all(16),
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
                   color: Colors.pink,

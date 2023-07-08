@@ -70,6 +70,7 @@ class _HtmlDetailState extends State<HtmlDetail> {
                 Text(
                   widget.model.tgl_terbit,
                   style: const TextStyle(
+                    color: Colors.grey,
                     fontSize: 15.0,
                     fontWeight: FontWeight.bold,
                   ),

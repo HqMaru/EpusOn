@@ -1,6 +1,6 @@
 import 'package:epus_on/ui/home.dart';
-import 'package:epus_on/ui/welcomescreen.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
+// import 'package:epus_on/ui/welcomescreen.dart';
+// import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter/material.dart';
 
 void main() {

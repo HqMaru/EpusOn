@@ -17,7 +17,7 @@ class _SideBarState extends State<SideBar> {
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
-          DrawerHeader(
+          const DrawerHeader(
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/img/desain1.jpg'),

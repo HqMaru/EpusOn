@@ -31,7 +31,7 @@ class _JsViewState extends State<JsView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('JavaScript'),
+        title: const Text('JavaScript'),
       ),
       body: Column(
         children: [

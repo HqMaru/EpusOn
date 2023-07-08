@@ -30,7 +30,7 @@ class _HtmlViewState extends State<HtmlView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Html & CSS'),
+        title: const Text('Html & CSS'),
       ),
       body: Column(
         children: [

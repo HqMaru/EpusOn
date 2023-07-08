@@ -70,6 +70,7 @@ class _JsDetailState extends State<JsDetail> {
                 Text(
                   widget.model.tgl_terbit,
                   style: const TextStyle(
+                    color: Colors.grey,
                     fontSize: 15.0,
                     fontWeight: FontWeight.bold,
                   ),
