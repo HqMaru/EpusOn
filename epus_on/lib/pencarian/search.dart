@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'package:epus_on/pencarian/api_service.dart';
-
 import 'detail.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -63,6 +62,7 @@ class _SearchState extends State<Search> {
       elevation: 2.0,
       margin: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
       child: ListTile(
+        leading: Image.network(book.cover),
         title: Text(
           book.judul,
           style: TextStyle(
@@ -91,7 +91,7 @@ class _SearchState extends State<Search> {
             child: TextField(
               onChanged: (value) => filterBooks(value),
               decoration: InputDecoration(
-                labelText: 'Search',
+                labelText: 'Cari Buku',
                 prefixIcon: Icon(Icons.search),
                 border: OutlineInputBorder(),
               ),
