@@ -5,7 +5,7 @@ import 'package:epus_on/kategori/python/python_view.dart';
 import 'package:epus_on/model/model.dart';
 import 'package:epus_on/model/repository.dart';
 import 'package:epus_on/Buku/detail.dart';
-import 'package:epus_on/ui/search.dart';
+import 'package:epus_on/pencarian/search.dart';
 import 'package:epus_on/ui/side_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -27,6 +27,7 @@ class _HomeState extends State<Home> {
     'https://i.imgur.com/B9v2H8C.png',
     'https://i.imgur.com/AJwlf6r.jpg'
   ];
+  
 
   // int _current = 0;
   // final CarouselController _controller = CarouselController();
@@ -42,6 +43,7 @@ class _HomeState extends State<Home> {
     super.initState();
   }
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,7 +55,7 @@ class _HomeState extends State<Home> {
             icon: const Icon(Icons.search),
             onPressed: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const Search()));
+                  MaterialPageRoute(builder: (context) => Search()));
             },
           ),
         ],
@@ -190,7 +192,7 @@ class _HomeState extends State<Home> {
                       onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
                             builder: (BuildContext context) =>
-                                Detail(model: listBuku[index])));
+                                Detail(model: listBuku[index],)));
                       },
                       child: Card(
                         child: Column(

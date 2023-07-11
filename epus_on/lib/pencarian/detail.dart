@@ -1,11 +1,12 @@
-import 'package:epus_on/model/model.dart';
+import 'package:epus_on/pencarian/api_service.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:epus_on/pencarian/search.dart';
 
 class Detail extends StatefulWidget {
-  final Buku model;
-  // final model model;
-  const Detail({super.key, required this.model});
+  final Book book;
+  // final Book book;
+  const Detail({super.key, required this.book});
 
   @override
   State<Detail> createState() => _DetailState();
@@ -22,9 +23,9 @@ class _DetailState extends State<Detail> {
         children: <Widget>[
           const Padding(padding: EdgeInsets.all(10.0)),
           Hero(
-            tag: widget.model.id,
+            tag: widget.book.id,
             child: Image.network(
-              widget.model.cover,
+              widget.book.cover,
               width: 130.0,
               height: 270.0,
             ),
@@ -36,7 +37,7 @@ class _DetailState extends State<Detail> {
             children: [
               TextButton(
                   onPressed: () async {
-                    final url = (widget.model.link);
+                    final url = (widget.book.link);
 
                     if (await canLaunch(url)) {
                       await launch(url);
@@ -54,7 +55,7 @@ class _DetailState extends State<Detail> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  widget.model.pengarang,
+                  widget.book.pengarang,
                   style: const TextStyle(
                     color: Colors.grey,
                     fontSize: 15.0,
@@ -62,14 +63,14 @@ class _DetailState extends State<Detail> {
                   ),
                 ),
                 Text(
-                  widget.model.judul,
+                  widget.book.judul,
                   style: const TextStyle(
                     fontSize: 17.0,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 Text(
-                  widget.model.tgl_terbit,
+                  widget.book.tgl_terbit,
                   style: const TextStyle(
                     color: Colors.grey,
                     fontSize: 15.0,
@@ -83,7 +84,7 @@ class _DetailState extends State<Detail> {
             title: const Text('Ringkasan'),
             children: [
               ListTile(
-                title: Text(widget.model.deskripsi),
+                title: Text(widget.book.deskripsi),
               ),
             ],
             onExpansionChanged: (isExpanded) {

@@ -46,7 +46,7 @@ class TentangKami extends StatelessWidget {
                   ),
               const Padding(padding: EdgeInsets.only(bottom: 10)),
               const Text(
-                'v1.0.',
+                'v2.0.0',
                 style: TextStyle(fontWeight: FontWeight.bold),
                 textAlign: TextAlign.center,
               ),
