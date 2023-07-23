@@ -33,20 +33,16 @@ class TentangKami extends StatelessWidget {
               ),
               const Padding(padding: EdgeInsets.only(bottom: 20)),
               TextButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const Kontak()));
-                  },
-                  child: const Text(
-                    'HUBUNGI KAMI',
-                    style: TextStyle(fontWeight: FontWeight.bold)
-                    ),
-                  ),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const Kontak()));
+                },
+                child: const Text('HUBUNGI KAMI',
+                    style: TextStyle(fontWeight: FontWeight.bold)),
+              ),
               const Padding(padding: EdgeInsets.only(bottom: 10)),
               const Text(
-                'v2.0.0',
+                'v1.1.0',
                 style: TextStyle(fontWeight: FontWeight.bold),
                 textAlign: TextAlign.center,
               ),

@@ -23,9 +23,9 @@ class _HomeState extends State<Home> {
 
   final List<String> imgList = [
     'https://i.imgur.com/uxzZGIw.png',
-    'https://i.imgur.com/8xzIOnV.png',
+    'https://i.imgur.com/6CSdaZP.jpg',
     'https://i.imgur.com/B9v2H8C.png',
-    'https://i.imgur.com/AJwlf6r.jpg'
+    'https://i.imgur.com/4oP7D6H.jpg'
   ];
   
 
